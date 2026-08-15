@@ -1,5 +1,7 @@
 // Copyright © SixtyFPS GmbH <info@slint.dev>
 // SPDX-License-Identifier: MIT
+// On Windows do NOT show a console window when opening the app
+#![cfg_attr(all(not(test), target_os = "windows"), windows_subsystem = "windows")]
 
 #![deny(unsafe_code)]
 
